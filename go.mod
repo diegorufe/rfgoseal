@@ -1,6 +1,6 @@
 module rfgoseal
 
-go 1.17
+go 1.18
 
 replace rfgocore => E:/trabajo/repos/go/rfgocore
 

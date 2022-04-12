@@ -18,9 +18,9 @@ import (
 // @parameter data son los datos recividos del cliente
 func ProcessTCPClientData(connection net.Conn, tcpServer *tcp.TCPServer, data []byte) {
 
-	// if logger.DefaultLogger().IsDebugEnabled() && len(data) > 0 {
-	// 	logger.DefaultLogger().Debug(utilsstring.TrimAllSpace(string(data)))
-	// }
+	if logger.DefaultLogger().IsDebugEnabled() && len(data) > 0 {
+		logger.DefaultLogger().Debug(utilsstring.TrimAllSpace(string(data)))
+	}
 
 	jsonData := utilsstring.TrimAllSpace(string(data))
 	var mapLogData map[string]interface{}
